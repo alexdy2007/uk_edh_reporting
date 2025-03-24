@@ -1,7 +1,7 @@
 # Databricks notebook source
 from pyspark.sql import functions as SF 
 
-df = (spark.read.table('water_demos.schema_1.example_uu_devices_edm')
+df = (spark.read.table('water_demos.schema_1.example_devices_edm')
 .withColumn('Start',SF.to_timestamp(SF.col('Start'),'d/M/y H:m:s'))
 .withColumn('End',SF.to_timestamp(SF.col('End'),'d/M/y H:m:s'))
 )
