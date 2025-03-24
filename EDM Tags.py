@@ -6,7 +6,7 @@ df = (spark.read.table('water_demos.schema_1.example_uu_devices_edm')
 .withColumn('End',SF.to_timestamp(SF.col('End'),'d/M/y H:m:s'))
 )
 
-df.write.mode('overwrite').option("overwriteSchema", "true").saveAsTable('water_demos.schema_1.example_uu_devices_edm')
+df.write.mode('overwrite').option("overwriteSchema", "true").saveAsTable('water_demos.schema_1.example_devices_edm')
 
 # COMMAND ----------
 
